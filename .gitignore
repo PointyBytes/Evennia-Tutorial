@@ -1,0 +1,39 @@
+# VS Code
+.vscode/
+*.code-workspace
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+.eggs/
+*.log
+*.sqlite3
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Environment
+.env
+.venv
+evenv/
+
+# Evennia
+tutorial/server/logs/
+tutorial/server/server.pid
+tutorial/server/portal.pid
+tutorial/server/static/
+tutorial/server/media/
+tutorial/server/logs/*.log.*
+tutorial/web/static/*
+tutorial/web/media/*
+
+# Other
+*.swp
+*.log
+*.pid
+*.restart
+*.db3
+**/.DS_Store
