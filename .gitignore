@@ -18,21 +18,17 @@ pip-delete-this-directory.txt
 # Environment
 .env
 .venv
-evenv
+evenv/
 
 # Evennia
-# For group efforts, comment out some or all of these.
-tutorial/server/conf/secret_settings.py
-tutorial/server/logs/*.log.*
-tutorial/server/.static/
-tutorial/server/.media/*
 tutorial/server/logs/
 tutorial/server/server.pid
 tutorial/server/portal.pid
 tutorial/server/static/
 tutorial/server/media/
-tutorial/web/static/
-tutorial/web/media/
+tutorial/server/logs/*.log.*
+tutorial/web/static/*
+tutorial/web/media/*
 
 # Other
 *.swp
