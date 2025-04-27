@@ -100,4 +100,14 @@ class Script(DefaultScript):
 
     """
 
-    pass
+    def get_influence_rating(npc):
+        """
+        Calculate influence based on some dynamic system later.
+        Here, just use a fixed rating.
+        """
+        influence_map = {
+            "low": "few followers",
+            "medium": "growing faction",
+            "high": "dominant force",
+        }
+        return influence_map.get(npc.db.influence, "unknown")

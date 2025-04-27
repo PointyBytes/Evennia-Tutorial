@@ -7,6 +7,8 @@ Rooms are simple containers that has no location of their own.
 
 from evennia.objects.objects import DefaultRoom
 
+from evennia import DefaultRoom
+
 from .objects import ObjectParent
 
 
@@ -22,3 +24,18 @@ class Room(ObjectParent, DefaultRoom):
     """
 
     pass
+
+
+class ArkStartRoom(DefaultRoom):
+    """
+    The initial starting room aboard the rusted-out Ark (the cruise ship).
+    """
+
+    def at_object_creation(self):
+        self.db.desc = (
+            "The dim corridors of the Ark reek of rust, mildew, and human desperation. "
+            "Dim emergency lights flicker along walls warped by time and decay. "
+            "The ship lists dangerously to starboard, groaning with each gust of coastal wind. "
+            "You see improvised bunk beds, tarps stretched into shelters, and frightened, hungry eyes watching you."
+        )
+        self.locks.add("get:false()")  # Players can't 'get' the room accidentally.
